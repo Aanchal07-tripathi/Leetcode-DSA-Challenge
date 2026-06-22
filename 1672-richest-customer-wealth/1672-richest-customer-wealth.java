@@ -3,12 +3,12 @@ class Solution {
         // person = row
         // account = col
         int ans = Integer.MIN_VALUE;
-        for(int[] ints : accounts){
+        for(int person = 0; person < accounts.length; person++){
             int sum = 0;
-            for (int anInt : ints){
-                sum += anInt;
+            for (int account =  0; account < accounts[person].length; account++){
+                sum += accounts[person][account];
             }
-            if(sum> ans){
+            if(sum > ans){
                 ans = sum;
             }
         }
