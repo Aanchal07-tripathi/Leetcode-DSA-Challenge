@@ -9,15 +9,15 @@ class Solution {
             N = -N;
         }
 
-        return power(x, N);
+        return pow(x, N);
     }
 
-    private double power(double x, long n) {
+    private double pow(double x, long n) {
 
         if (n == 0)
             return 1;
 
-        double half = power(x, n / 2);
+        double half = pow(x, n / 2);
 
         if (n % 2 == 0) {
             return half * half;
