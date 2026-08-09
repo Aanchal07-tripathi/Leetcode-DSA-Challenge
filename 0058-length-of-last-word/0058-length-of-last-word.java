@@ -1,19 +1,29 @@
 class Solution {
     public int lengthOfLastWord(String s) {
-        int i = s.length() - 1;
-        int length = 0;
+    //     int i = s.length() - 1;
+    //     int length = 0;
 
-        // Last ke spaces skip karo
-        while (i >= 0 && s.charAt(i) == ' ') {
-            i--;
+    //     while (i >= 0 && s.charAt(i) == ' ') {
+    //         i--;
+    //     }
+    //     while (i >= 0 && s.charAt(i) != ' ') {
+    //         length++;
+    //         i--;
+    //     }
+
+    //     return length;
+    // }
+        s = s.trim();
+        int count = 0;
+        for(int i = s.length() -1; i>=0; i--){
+            if(s.charAt(i)!=' '){
+                count++;
+            }
+            else{
+                break;
+            }
         }
-
-        // Last word count karo
-        while (i >= 0 && s.charAt(i) != ' ') {
-            length++;
-            i--;
-        }
-
-        return length;
+        return count;
     }
+
 }
